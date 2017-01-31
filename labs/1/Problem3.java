@@ -15,14 +15,26 @@ public class Problem3 {
   public static void main(String[] args){
     double subtot = 0.0;
     double grat = 0.0;
+    double gratrate = 0.0;
     double total = 0.0;
-    System.out.println("Enter a subtotal and gratuity rate: ");
-    Scanner input = new Scanner (System.in);
-    subtot = input.nextDouble();
-    grat = input.nextDouble();
 
-    
-    System.out.println(celsius + " degrees Celsius is " 
-      + fahrenheit + " degrees Fahrenheit.");
+    Scanner input = new Scanner (System.in);
+
+    do {
+      System.out.println("Enter a subtotal of the bill: ");
+      subtot = input.nextDouble();
+    }  while (subtot < 0);  
+
+
+    do { 
+      System.out.println("Enter a gratuity rate: ");
+      gratrate = input.nextDouble();
+    }  while (gratrate < 0);
+
+
+    grat = subtot * (gratrate/100);
+    total = grat + subtot;
+    System.out.println("The gratuity is: $" + grat 
+    	+ " and the total is: $" + total);
   }
 }
