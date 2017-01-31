@@ -5,8 +5,8 @@
  * due date: Tuesday, February 1st, 2017
  * version: 0.1
  *
- * This file contains the main method for calculating a gratuity
- * and adding it to the subtotal of a bill to get a total bill.
+ * This file contains the main method for seperating the digits of an
+ * integer and then adding them.
  */
 
 import java.util.Scanner;

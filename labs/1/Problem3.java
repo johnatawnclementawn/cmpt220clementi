@@ -20,20 +20,26 @@ public class Problem3 {
 
     Scanner input = new Scanner (System.in);
 
+    //Subtotal calculator: This do while loop prevents the user from 
+    //inputing a negative number, which would create a logic error.
     do {
       System.out.println("Enter a subtotal of the bill: ");
       subtot = input.nextDouble();
     }  while (subtot < 0);  
 
-
+    //Gratuity rate calculator: This do while loop prevents the user from 
+    //inputing a negative number, which would create a logic error.     
     do { 
       System.out.println("Enter a gratuity rate: ");
       gratrate = input.nextDouble();
     }  while (gratrate < 0);
 
-
+    //Gratuity calculator
     grat = subtot * (gratrate/100);
+
+    //Total calculator
     total = grat + subtot;
+
     System.out.println("The gratuity is: $" + grat 
     	+ " and the total is: $" + total);
   }
