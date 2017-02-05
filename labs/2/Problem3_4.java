@@ -22,31 +22,34 @@ public class Problem3_4 {
     String monthStr = "";
     
     if (month == 1) {
-      monthStr = "January"
-    }  else if (month == 2)
-      monthStr = "February"
-    }  else if (month == 3)
-      monthStr = "March"
-    }  else if (month == 4)
-      monthStr = "April"
-    }  else if (month == 5)
-      monthStr = "May"
-    }  else if (month == 6)
-      monthStr = "June"
-    }  else if (month == 7)
-      monthStr = "July"
-    }  else if (month == 8)
-      monthStr = "August"
-    }  else if (month == 9)
-      monthStr = "September"
-    }  else if (month == 10)
-      monthStr = "October"
-    }  else if (month == 11)
-      monthStr = "November"
-    }  else if (month == 12)
-      monthStr = "December"
+      monthStr = "January";
+    }  else if (month == 2) {
+      monthStr = "February";
+    } else if (month == 3) {
+      monthStr = "March";
+    } else if (month == 4) {
+      monthStr = "April";
+    } else if (month == 5) {
+      monthStr = "May";
+    } else if (month == 6) {
+      monthStr = "June";
+    } else if (month == 7) {
+      monthStr = "July";
+    } else if (month == 8) {
+      monthStr = "August";
+    } else if (month == 9) {
+      monthStr = "September";
+    } else if (month == 10) {
+      monthStr = "October";
+    } else if (month == 11) {
+      monthStr = "November";
+    } else if (month == 12) {
+      monthStr = "December";
+    } else {
+      monthStr = "Invalid Month";
     } 
+     
 
-    System.out.println("The random month is: " + monthStr)
+    System.out.println("The random month is: " + monthStr);
   }
 }
