@@ -22,14 +22,21 @@ public class Problem3_8 {
     int int1 = 0;
     int int2 = 0;
     int int3 = 0;
+
+    System.out.println("Type the first integer value here:");
+      int1 = input.nextInt();
+    System.out.println("Type the second integer value here:");
+      int2 = input.nextInt();
+    System.out.println("Type the third integer value here:");
+      int3 = input.nextInt();
   
-    if (int1 > int2 && int1 > int3 && int2 > int3) {
+    if (int1 > int2 || int1 > int3 || int2 > int3) {
       System.out.println("The numbers: " + int3 + "," + int2 + "," + int1 +
       " are in non-decending order!");
-    }  else if(int2 > int1 && int2 > int3 && int1 > int3) {
+    }  else if(int2 > int1 || int2 > int3 || int1 > int3) {
          System.out.println("The numbers: " + int3 + "," + int1 + "," + int2 +
          " are in non-decending order!");
-    }  else if (int3 > int1 && int3 > int2 && int2 > int1) {
+    }  else if (int3 > int1 || int3 > int2 || int2 > int1) {
          System.out.println("The numbers: " + int1 + "," + int2 + "," + int3 +
          " are in non-decending order!"); 
     }  else {
