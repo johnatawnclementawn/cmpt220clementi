@@ -2,7 +2,7 @@
  * file: Problem 3.4
  * author: Johnathan Clementi
  * course: CMPT 220 Software Development 1, Section 201
- * due date: Tuesday, February 1st, 2017
+ * due date: Tuesday, February 7th, 2017
  * version: 0.1
  *
  * This file contains the methodology for a program that randomly 
@@ -10,46 +10,42 @@
  * of the year which that number corresponds to.
  */
 
-import java.util.Scanner;
-
 public class Problem3_4 {
   public static void main(String[] args){
-
-    Scanner input = new Scanner (System.in);
     
     //Random number is generated to correspond to month of the year. 
     int month = 1 + (int)(Math.random() * 12);
     String monthStr = "";
     
+    // Else if statements to determine month.
     if (month == 1) {
       monthStr = "January";
     }  else if (month == 2) {
-      monthStr = "February";
+        monthStr = "February";
     } else if (month == 3) {
-      monthStr = "March";
+        monthStr = "March";
     } else if (month == 4) {
-      monthStr = "April";
+        monthStr = "April";
     } else if (month == 5) {
-      monthStr = "May";
+        monthStr = "May";
     } else if (month == 6) {
-      monthStr = "June";
+        monthStr = "June";
     } else if (month == 7) {
-      monthStr = "July";
+        monthStr = "July";
     } else if (month == 8) {
-      monthStr = "August";
+        monthStr = "August";
     } else if (month == 9) {
-      monthStr = "September";
+        monthStr = "September";
     } else if (month == 10) {
-      monthStr = "October";
+        monthStr = "October";
     } else if (month == 11) {
-      monthStr = "November";
+        monthStr = "November";
     } else if (month == 12) {
-      monthStr = "December";
+        monthStr = "December";
     } else {
-      monthStr = "Invalid Month";
+        monthStr = "Invalid Month";
     } 
      
-
     System.out.println("The random month is: " + monthStr);
   }
 }
