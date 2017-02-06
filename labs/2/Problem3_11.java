@@ -12,57 +12,56 @@
 
 import java.util.Scanner;
 
-public class Problem3_4 {
+public class Problem3_11 {
   public static void main(String[] args){
 
     Scanner input = new Scanner (System.in);
     
     int month = 0;
     int year = 0;
-    String monthStr = "";
+    int numberDays = 0;
+    String monthstr = "";
 
-    boolean isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
-    
-    System.out.println("Input the numerical value of a month to see how many days
-      are in that month.");
-    year = input.newInt();
+    System.out.println("Type the month here (numerical value only):");
+      month = input.nextInt();
+    System.out.println("Type the year here: ");
+      year = input.nextInt();
 
-    System.out.println("Type the year to see how many days
-      are in that month.");
-    year = input.newInt();
+    switch (month) {
+      // Because January, March, May, July, August, October, and December  
+      // all have 31 days, cases for those months are grouped together.
+      case 1: monthstr = "January";
+      case 3: monthstr = "March";
+      case 5: monthstr = "May";
+      case 7: monthstr = "July";
+      case 8: monthstr = "August";
+      case 10: monthstr = "October";
+      case 12: monthstr = "December";
+        numberDays = 31;
+        break;
 
+      // Additionally, April, June, September,
+      // and November all have 30 days, and are grouped together. 
+      case 4: monthstr = "April";
+      case 6: monthstr = "June";
+      case 9: monthstr = "September";
+      case 11: monthstr = "November";
+        numberDays = 30;
+        break;
 
-    Switch(month) {
-      case 1: monthStr =  "January has 31 days in ";
+      // This case accounts for leap day counting. A leap year is considered
+      // a year that is divisible by 4, but not by 100; or is divisible by 400. 
+      case 2: 
+        if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
+          numberDays = 29;
+        } else {
+            numberDays = 28;
+        }
+        monthstr = "February";
         break;
-      case 2: if (isLeapYear == false) {
-                System.out.println("Febuary has 28 days because " + year + " is not a leap year.");
-              }
-              else if (isLeapYear == true) {
-                System.out.println("Febuary has 29 days because " + year + "is a leap year.");
-              }
-        break;
-      case 3: monthStr = "March has 31 days in ";
-        break;
-      case 4: monthStr = "April has 30 days in ";
-        break;
-      case 5: monthStr = "May has 31 days in ";
-        break;
-      case 6: monthStr = "June has 30 days in ";
-        break;
-      case 7: monthStr = "July has 31 days in ";
-        break;
-      case 8: monthStr = "August has 31 days in ";
-        break;
-      case 9: monthStr = "September has 30 days in ";
-        break;
-      case 10: monthStr = "October has 31 days in ";
-        break;
-      case 11: monthStr = "November has 30 days in ";
-        break;
-      case 12: monthStr = "December has 31 days in ";
-        break;
-      default: monthStr = "That is an incorrect input"; 
+      default: System.out.println("That is an incorrect input");
     } 
+    System.out.println("The number of days in " + monthstr + " was " + numberDays + " in the year "
+      + year);
   }
 }
