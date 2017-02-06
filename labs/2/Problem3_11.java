@@ -5,8 +5,10 @@
  * due date: Tuesday, February 1st, 2017
  * version: 0.1
  *
- * This file contains the methodology for a program that 
+ * This file contains the methodology for a program that outputs
+ * the number of days in the month chosen by the user.
  */
+
 
 import java.util.Scanner;
 
@@ -17,48 +19,50 @@ public class Problem3_4 {
     
     int month = 0;
     int year = 0;
-    final int JAN = 1;
-    final int FEB = 2;
-    final int MAR = 3;
-    final int APR = 4;
-    final int MAY = 5;
-    final int JUN = 6;
-    final int JUL = 7;
-    final int AUG = 8;
-    final int SEP = 9;
-    final int OCT = 10;
-    final int NOV = 11;
-    final int DEC = 12;
+    String monthStr = "";
+
+    boolean isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
     
+    System.out.println("Input the numerical value of a month to see how many days
+      are in that month.");
+    year = input.newInt();
+
+    System.out.println("Type the year to see how many days
+      are in that month.");
+    year = input.newInt();
+
 
     Switch(month) {
-      case 1: System.out.println("January has 31 days in " + year)
+      case 1: monthStr =  "January has 31 days in ";
         break;
-      case 2: 
+      case 2: if (isLeapYear == false) {
+                System.out.println("Febuary has 28 days because " + year + " is not a leap year.");
+              }
+              else if (isLeapYear == true) {
+                System.out.println("Febuary has 29 days because " + year + "is a leap year.");
+              }
         break;
-      case 3: System.out.println("March has 31 days in " + year);
+      case 3: monthStr = "March has 31 days in ";
         break;
-      case 4: System.out.println("April has 30 days in " + year);
+      case 4: monthStr = "April has 30 days in ";
         break;
-      case 5: System.out.println("May has 31 days in " + year);
+      case 5: monthStr = "May has 31 days in ";
         break;
-      case 6: System.out.println("June has 30 days in " + year);
+      case 6: monthStr = "June has 30 days in ";
         break;
-      case 7: System.out.println("July has 31 days in " + year);
+      case 7: monthStr = "July has 31 days in ";
         break;
-      case 8: System.out.println("August has 31 days in " + year);
+      case 8: monthStr = "August has 31 days in ";
         break;
-      case 9: System.out.println("September has 30 days in " + year);
+      case 9: monthStr = "September has 30 days in ";
         break;
-      case 10: System.out.println("October has 31 days in " + year);
+      case 10: monthStr = "October has 31 days in ";
         break;
-      case 11: System.out.println("November has 30 days in " + year);
+      case 11: monthStr = "November has 30 days in ";
         break;
-      case 12: System.out.println("December has 31 days in " + year);
+      case 12: monthStr = "December has 31 days in ";
         break;
-      default: System.out.println("That is an incorrect input"); 
+      default: monthStr = "That is an incorrect input"; 
     } 
-
-    System.out.println("The random month is: " + "")
   }
 }
