@@ -21,16 +21,19 @@ public class Problem4_5 {
   double sideLength = 0.0;
   double area = 0.0;
 
+  // Check for negative values
   do { 
     System.out.println("Enter the number of sides: ");
     numSide = input.nextInt();
   } while (numSide < 0.1);
-    
+  
+  //Check for negative values 
   do {
     System.out.println("Enter the length of the sides: ");
     sideLength = input.nextDouble();
   } while (sideLength < 0.1);
 
+  // Calculate the area of a regular polygon  
   area = ((numSide * (Math.pow(sideLength, 2))) / (4 * (Math.tan(Math.PI / numSide))));
 
   System.out.println("The area of the polygon is: " + area);
