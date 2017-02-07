@@ -25,10 +25,18 @@ public class Problem4_25 {
     int plateNumber3 = (int)(10 * Math.random()) + 48;
     int plateNumber4 = (int)(10 * Math.random()) + 48;
 
+    // Convert from ASCII to characters
+    char pL1 = (char)plateLetter1;
+    char pL2 = (char)plateLetter2;
+    char pL3 = (char)plateLetter3;
+
+    char pN1 = (char)plateNumber1;
+    char pN2 = (char)plateNumber2;
+    char pN3 = (char)plateNumber3;
+    char pN4 = (char)plateNumber4;
 
     //Outputting the generated liscence plate number
-    System.out.println("Your plate number is:" + l1 + l2 + l3 + d1 + d2 + d3 + d4 + ".");
-
-
+    System.out.println("The random vehicle plate number is " + pL1 + pL2 + pL3 + "-" 
+      + pN1 + pN2 + pN3 +pN4);
   }
 }
