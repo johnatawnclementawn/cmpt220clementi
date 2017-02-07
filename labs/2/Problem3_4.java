@@ -17,7 +17,7 @@ public class Problem3_4 {
     int month = 1 + (int)(Math.random() * 12);
     String monthStr = "";
     
-    // Else if statements to determine month.
+    // Else if statements determine the month.
     if (month == 1) {
       monthStr = "January";
     }  else if (month == 2) {
