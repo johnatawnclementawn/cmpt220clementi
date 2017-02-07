@@ -2,7 +2,7 @@
  * file: Problem 3.4
  * author: Johnathan Clementi
  * course: CMPT 220 Software Development 1, Section 201
- * due date: Tuesday, February 1st, 2017
+ * due date: Tuesday, February 7th, 2017
  * version: 0.1
  *
  * This file contains the methodology for a program that outputs
@@ -22,14 +22,15 @@ public class Problem3_11 {
     int numberDays = 0;
     String monthstr = "";
 
+    // User interface
     System.out.println("Type the month here (numerical value only):");
       month = input.nextInt();
     System.out.println("Type the year here: ");
       year = input.nextInt();
 
     switch (month) {
-      // Because January, March, May, July, August, October, and December  
-      // all have 31 days, cases for those months are grouped together.
+      // January, March, May, July, August, October, and December  
+      // all have 31 days, and are thus grouped together.
       case 1: monthstr = "January";
       case 3: monthstr = "March";
       case 5: monthstr = "May";
@@ -61,7 +62,7 @@ public class Problem3_11 {
         break;
       default: System.out.println("That is an incorrect input");
     } 
-    System.out.println("The number of days in " + monthstr + " was " + numberDays + " in the year "
-      + year);
+    System.out.println("The number of days in " + monthstr + " was " + numberDays + 
+      " in the year " + year);
   }
 }
