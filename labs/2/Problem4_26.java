@@ -5,9 +5,10 @@
  * due date: Tuesday, February 7th, 2017
  * version: 0.1
  *
- * This file contains the methodology for a program that 
- * 
- *
+ * This file contains the methodology for a program that calculates
+ * the number of dollars, quarters, dimes, nickels, and pennies in an user inputed
+ * monetary value. It has been fixed to not lose accuracy when converting from float
+ * values to integer values.
  */
 
 import java.util.Scanner;
