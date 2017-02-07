@@ -5,9 +5,8 @@
  * due date: Tuesday, February 7th, 2017
  * version: 0.1
  *
- * This file contains the methodology for a program that 
- * 
- *
+ * This file contains the methodology for a program that converts
+ * an ascii value to a character value.
  */
 
 import java.util.Scanner;
@@ -20,6 +19,7 @@ public class Problem4_8 {
     int asciiCode = 0;
     char letter;
 
+    // User input between 0 and 127 accepted. 
     do {
     System.out.println("Enter your Ascii Code value: ");
       asciiCode = input.nextInt();
