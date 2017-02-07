@@ -21,12 +21,16 @@ public class Problem4_5 {
   double sideLength = 0.0;
   double area = 0.0;
 
-  System.out.println("Enter the number of sides: ");
-  numSide = input.nextInt();
+  do { 
+    System.out.println("Enter the number of sides: ");
+    numSide = input.nextInt();
+  } while (numSide < 0.1);
+    
+  do {
+    System.out.println("Enter the length of the sides: ");
+    sideLength = input.nextDouble();
+  } while (sideLength < 0.1);
 
-  System.out.println("Enter the length of the sides: ");
-  sideLength = input.nextDouble();
-  
   area = ((numSide * (Math.pow(sideLength, 2))) / (4 * (Math.tan(Math.PI / numSide))));
 
   System.out.println("The area of the polygon is: " + area);
