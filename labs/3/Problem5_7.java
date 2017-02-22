@@ -1,5 +1,5 @@
 /**
- * file: Problem 5.1
+ * file: Problem 5.7
  * author: Johnathan Clementi
  * course: CMPT 220 Software Development 1, Section 201
  * due date: Tuesday, February 21, 2017

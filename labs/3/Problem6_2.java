@@ -5,8 +5,7 @@
  * due date: Tuesday, February 21, 2017
  * version: 0.1
  *
- * This file contains the program that computes the sum of the digits of a user
- * inputed integer.
+ * This file contains the program that
  */
 
 import java.util.Scanner;

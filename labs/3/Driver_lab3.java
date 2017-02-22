@@ -21,23 +21,18 @@ public class Driver_lab3 {
     double y2 = 0.0;
     double p = 0.0;
     double answer = 0.0;
+    double check = 0.0;
 
-    for (int i=0; i<=1000; i++){
-      x1 = input.nextDouble();
+    while ((check = input.nextDouble()) != 0) {
 
-      // Determine if x is within proper range
-      if(x1 <= 0 && x1 >= 101)
-        break;
-      
-      // User input next variables
-      x2 = input.nextDouble();
+      x1 = check;
       y1 = input.nextDouble();
+      x2 = input.nextDouble();
       y2 = input.nextDouble();
       p = input.nextDouble();
 
       // Calculate p-norm distance between two points 
       // (|x1−x2|^p +|y1−y2|^p)^1/p
-      
       answer = Math.pow((Math.pow(Math.abs(x1 - x2), p)) +
         (Math.pow(Math.abs(y1 - y2), p)), (1 / p));
 
