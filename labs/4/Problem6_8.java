@@ -13,16 +13,20 @@ public class Problem6_8 {
     double celsius = 0.0;
     double fahrenheit = 0.0;
     
-    for (int i = 40; i > 29; i--){
-      System.out.println("Celsius" + "\t\t" + "Fahrenheit");
-      System.out.println(celsius + "\t\t" + celsiusToFahrenheit(celsius));
-      break;
+    System.out.println("Celsius" + "\t\t" + "Fahrenheit");
+
+    // For loop repeats calculations 10 times, and displays output 
+    // with only 2 decimal places
+    for (celsius = 40; celsius > 29; celsius --){
+      System.out.printf("%.2f \t\t %.2f \n", celsius, celsiusToFahrenheit(celsius));
     }
 
-    for (int i = 40; i > 29; i--){
-      System.out.println("Fahrenheit" + "\t\t" + "Celsius");
-      System.out.println(fahrenheit + "\t\t" + fahrenheitToCelsius(fahrenheit));
-      break;
+    System.out.println("Fahrenheit" + "\t" + "Celsius");
+    
+    // For loop repeats calculations 10 times, and displays output 
+    // with only 2 decimal places
+    for (fahrenheit = 40; fahrenheit > 29; fahrenheit --){
+      System.out.printf("%.2f \t\t %.2f \n", fahrenheit, fahrenheitToCelsius(fahrenheit));
     }
   }
 
