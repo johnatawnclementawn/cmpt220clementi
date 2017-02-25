@@ -22,7 +22,7 @@ public class Problem6_8 {
     }
 
     System.out.println("Fahrenheit" + "\t" + "Celsius");
-    
+
     // For loop repeats calculations 10 times, and displays output 
     // with only 2 decimal places
     for (fahrenheit = 40; fahrenheit > 29; fahrenheit --){
@@ -30,9 +30,7 @@ public class Problem6_8 {
     }
   }
 
-  /**for (i = 40, i >= 30, i--){
-      System.out.println("Celsius" + \t\t + "Fahrenheit");
-      System.out.println(celsius + \t\t) + convCelsius;
+  /**
    * celsiusToFahrenheit
    *
    * This function will test the reversed number to see if the number is
