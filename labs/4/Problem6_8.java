@@ -2,7 +2,7 @@
  * file: Problem 6.8
  * author: Johnathan Clementi
  * course: CMPT 220 Software Development 1, Section 201
- * due date: Tuesday, February 21, 2017
+ * due date: Tuesday, March 8 2017
  * version: 0.1
  *
  * This file contains the methodology for a program 
