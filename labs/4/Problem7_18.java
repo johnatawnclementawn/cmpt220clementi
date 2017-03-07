@@ -9,6 +9,7 @@
  */
 
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class Problem7_18 {
   public static void main(String[] args){
@@ -26,7 +27,7 @@ public class Problem7_18 {
 
     bubbleSort(numArray);
 
-    System.out.println("Here are the sorted numbers: " + numArray);
+    System.out.println("Here are the sorted numbers: " + Arrays.toString(numArray));
   }
 
   /**
