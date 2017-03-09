@@ -5,3 +5,7 @@
 *.idea
 *.docx
 
+
+/Driver_lab3.java
+/Lottery.java
+

@@ -5,7 +5,9 @@
  * due date: Tuesday, February 21, 2017
  * version: 0.1
  *
- * This file contains the program that 
+ * This file contains the program that is a solution to the Kattis 
+ * Different Distances problem. It recieves 5 integer inputs within the range
+ * of 1 to 100, and calculates the p-norm of those points.
  */
 
 import java.util.Scanner;
@@ -16,8 +18,8 @@ public class Driver_lab3 {
     Scanner input = new Scanner(System.in);
 
     double x1 = 0.0;
-    double x2 = 0.0;
     double y1 = 0.0;
+    double x2 = 0.0;
     double y2 = 0.0;
     double p = 0.0;
     double answer = 0.0;
