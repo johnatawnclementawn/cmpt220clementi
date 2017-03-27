@@ -1,11 +1,12 @@
 /**
- * file: Problem 7.20
+ * file: Problem 8.13
  * author: Johnathan Clementi
  * course: CMPT 220 Software Development 1, Section 201
  * due date: Tuesday, March 28 2017
  * version: 0.1
  *
- * This file contains the methodology that merges two pre-sorted arrays.
+ * This file contains the methodology that finds the location of the largest value 
+ * in a matrix
  */
 
 import java.util.Scanner;
@@ -40,24 +41,26 @@ public class Problem8_13 {
   }
 
   /**
-   * merge
+   * locateLargest
    *
-   * This function contains the selection sort algorithm that merges two lists of
-   * already sorted numbers
+   * This function evaluates the 
    *
    * Parameters:
-   *   list1 - array of user inputed numbers to be sorted
-   *   list2 - array of user inputed numbers to be sorted
+   *   matrix - two dimensional array
    *
-   * Return value: mergeList (the merged and sorted array)
+   * Return value: loc (coordinates of the largest value)
    */
   public static int[] locateLargest(double[][] a){
     int[] loc = {0,0};
     double min = 0;
 
-    // 
+    // For statements move through the array in this order:
+    // Row 1 (column 1,2,3,4,etc)
+    // Row 2 (column 1,2,3,4,etc) etc
     for(int i = 0; i < a.length; i++){
       for(int j = 0; j < a[0].length; j++){
+        // If the current min is less than the locatio being evaluated, 
+        // set the current location to the min value
         if (min < a[i][j]){
           loc[0] = i;
           loc[1] = j;
