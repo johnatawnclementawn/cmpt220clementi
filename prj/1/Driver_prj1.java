@@ -28,7 +28,7 @@ public class Driver_prj1 {
       i++;
     }
     
-    // Reset I to 0 and input values of second function
+    // Reset i to 0 and input values of second function
     i = 0;
     while (i < vSecondLen){
       vSecond[i] = input.nextDouble();
@@ -58,13 +58,14 @@ public class Driver_prj1 {
   public static double[] convolveVectors(double[] vFirst, double[] vSecond) {
     // Set the length of the convoled vector 
     double[] vResult = new double[(vFirst.length + vSecond.length) - 1];
-      
+      // Move through the index values 
       for (int idx = 0; idx < (vFirst.length + vSecond.length - 1); idx++) {
         vResult[idx] = 0;
-
+        // Move through the shift values
         for (int shift = 0; shift < vSecond.length; shift++) {
-          
+          // In bounds check evaluate idx and shift values to determine if they are in bounds
           if ((idx - shift >= 0) && (idx - shift < vFirst.length)) {
+            // Actual calculation, multiply the value of vFirst and vSecond
             vResult[idx] += (vFirst[idx - shift] * vSecond[shift]);
           }
         }
