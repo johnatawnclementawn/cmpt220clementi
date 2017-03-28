@@ -40,9 +40,10 @@ public class Problem7_32 {
    * already sorted numbers
    *
    * Parameters:
-   *   list - 
+   *   list - un-evaluated variables
    *
-   * Return value: newList (string representation of the array)
+   * Return value: list - evaluated variables sorted so that they are less than or greater
+   * the pivot value
    */
   public static int[] partition(int[] list){
     // Initialize the first list value as the pivot value
@@ -78,20 +79,6 @@ public class Problem7_32 {
     for(int j = 0; k < list.length; k++, j++){
       list[k] = greaterThan[j];
     }
-
-
-    // // Over-write list with the values from lessThan, pivot, and greaterThan in order
-    // for(int i = 0; i < list.length; i++){
-    //   if(lessThan[lT] != 0){
-    //     list[i] = lessThan[lT];
-        
-    //   } else if (i == (list.length - lT)){
-    //     list[i] = pivot;
-    //   } else if (greaterThan[gT] != 0){
-    //     list[i] = greaterThan[gT];
-        
-    //   }
-    // }
     
     return list;
   }
