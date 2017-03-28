@@ -28,11 +28,9 @@ public class Problem7_32 {
       list[i] = input.nextInt();
     }
     
-
-    //int[] numArray = partition(list);
     partition(list);
 
-    //System.out.println("Here are the sorted numbers: " + numArray);
+    System.out.println("Here are the sorted numbers: " + Arrays.toString(list));
   }
 
   /**
@@ -54,7 +52,7 @@ public class Problem7_32 {
     int lT = 0; // Index of lessThan array
     int gT = 0; // Index of greaterThan array
 
-    for(int i = 0; i < list.length; i++){
+    for(int i = 1; i < list.length; i++){
       // If the value of list being evaluated is less than the pivot value, assign it to
       // the lessThan array. If the value is greater than the pivot value, assign it to 
       // the greaterThan array.
@@ -67,29 +65,34 @@ public class Problem7_32 {
       }
     }
 
-    lT = 0;
-    gT = 0;
     // Over-write list with the values from lessThan, pivot, and greaterThan in order
-    for(int i = 0; i < list.length; i++){
-      if(lessThan[i] != 0){
-        list[i] = lessThan[lT];
-        lT++;
-      } else if (pivot == pivot){
-        list[i] = pivot;
-      } else if (greaterThan != 0){
-        list[i] = greaterThan[gT];
-        gT++;
-      }
+    int k = 0;
+    // Push values of lessThan to list
+    for(; k < lT; k++){
+      list[k] = lessThan[k];
     }
-    // Caste lessThan and greaterThan to strings, then concatenate
+    // Once lessThan is finished, add pivot in the "middle" and increment k
+    list[k] = pivot;
+    k++;
+    // Push values of greaterThan to list after lessThan and pivot
+    for(int j = 0; k < list.length; k++, j++){
+      list[k] = greaterThan[j];
+    }
 
-    // // //String newList = lessThan + pivot + greaterThan;
-    // // //System.out.println(newList);
-    // // System.out.println(Arrays.toString(lessThan));
-    // // System.out.println(Arrays.toString(greaterThan));
-    // // System.out.println(pivot);
-    // return pivot;
-    // //return newList;
+
+    // // Over-write list with the values from lessThan, pivot, and greaterThan in order
+    // for(int i = 0; i < list.length; i++){
+    //   if(lessThan[lT] != 0){
+    //     list[i] = lessThan[lT];
+        
+    //   } else if (i == (list.length - lT)){
+    //     list[i] = pivot;
+    //   } else if (greaterThan[gT] != 0){
+    //     list[i] = greaterThan[gT];
+        
+    //   }
+    // }
+    
     return list;
   }
 }
