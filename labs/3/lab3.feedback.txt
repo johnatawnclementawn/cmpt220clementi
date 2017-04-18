@@ -1,0 +1,21 @@
+9 pts
+
+Johnathan,
+
+About your programs...
+
+Functionality
+
+- Problems 5.12-13 loops are used wrong.  -1pt
+
+Please make sure you read the problems well; follow instructions.
+
+
+Style Check
+
+- Your programs seem to pass the style check. Good job!
+
+
+Peace,
+
+- Dr. Rivas
