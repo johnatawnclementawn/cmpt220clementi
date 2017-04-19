@@ -5,9 +5,19 @@
  * due date: Tuesday, April 16 2017
  * version: 0.1
  *
- * 
+ * Program calculates the area and perimeter of rectangles and exhibits 
+ * knowledge of OOP in java.
  */
 
+
+/**
+   * Rectangle
+   *
+   *   Handles rectangle class and its subclasses: width, height, area, perimeter.
+   *   
+   *
+   * Return value: return values found in subsituent classes
+   */
 public class Rectangle {
 
   // Default width and height = 1x1  
