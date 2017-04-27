@@ -29,6 +29,17 @@ public class QueueOfIntegers{
     elements = new int[capacity];
   }
 
+ /**
+  * enqueue
+  *
+  * This adds the user inputed value to the end of the queue  
+  *
+  * Parameters:
+  *   v: the value that will be added to the end of the queue
+  *
+  * Return Value:
+  *   none
+  */
   public void enqueue(int v){
     // Check if queue is out of bounds (no more spaces in array)
     // If no more spaces, double size
@@ -55,7 +66,18 @@ public class QueueOfIntegers{
     
   }
 
-
+ /**
+  * dequeue
+  *
+  * This removes the first value of the queue, thus advancing the queue
+  *
+  * Parameters:
+  *   none
+  *
+  * Return Value:
+  *   elements: the new queue that has been advanced
+  *   output: the removed queue value
+  */
   public int dequeue(){
     // Retrieves first element which is being removed
     int output = elements[0];
@@ -82,12 +104,32 @@ public class QueueOfIntegers{
     return output;
   }
   
-  // Test if stack is empty
+ /**
+  * empty
+  *
+  * This checks if there are elements in the queue
+  *
+  * Parameters:
+  *   none
+  *
+  * Return Value:
+  *   True if there are elements in the queue, false if there aren't
+  */
   public boolean empty(){
     return size == 0;
   }
 
-  // Return number of elements in stack
+ /**
+  * getSize
+  *
+  * This gets the size of the queue
+  *
+  * Parameters:
+  *   none
+  *
+  * Return Value:
+  *   The size of the queue
+  */
   public int getSize(){
     return idx;
   }
