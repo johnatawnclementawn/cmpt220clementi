@@ -40,7 +40,9 @@ public class Problem3 {
     //Total calculator
     total = grat + subtot;
 
+
+
     System.out.println("The gratuity is: $" + grat 
-    	+ " and the total is: $" + total);
+      + " and the total is: $" + total);
   }
 }
